@@ -1,0 +1,28 @@
+server:
+  port:
+    8081
+spring:
+  application:
+    name: chuhezhe-fileupload-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/file_upload?autoReconnect=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&rewriteBatchedStatements=true
+    username: root
+    password: root
+    hikari:
+      max-lifetime: 500000
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+# File upload related params.
+file:
+  path: D:\WorkSpace_BackEnd\TestFiles
+  # 20 * 1024 * 1024
+  chunk-size: 20971520
