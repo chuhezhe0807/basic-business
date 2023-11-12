@@ -8,11 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fileupload" />
+        <module name="commonservlet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cookiesession" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="commonservlet" options="-parameters" />
       <module name="fileupload" options="-parameters" />
     </option>
   </component>
